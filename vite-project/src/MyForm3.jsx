@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './App.css'
 
 export default function MyForm() {
   const [user, setUser] =useState({
@@ -19,4 +20,30 @@ export default function MyForm() {
   // 그리고 return 파트에 firstName 작성란, lastName 작성란, email 작성란을 만들고 제출버튼까지 생성하겠죠.
 
   // 내일 여러분이 할거입니다.
+
+  // 리턴파트에 어떻게 작성을 해야할지 봅니다.
+
+  //handleSubmit 부분
+  const handleSubmit = (event)=> {
+    event.preventDefault();
+    alert(`welcome ${user.firstName}${user.lastName}`);
+  }
+  //리턴 부분
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>FirstName </label>
+      <input type="text" name="firstName" onChange={handleChange} value={user.firstName} />
+      <br /><br /><br />
+      {/* 이상을 기준으로 Last Name과 email부분을 정의하세요. */}
+      <label>LastName </label>
+      <input type="text" name="lastName" onChange={handleChange} value={user.lastName} />
+      <br /><br /><br />
+      <label>Email </label>
+      <input type="email" name="email" onChange={handleChange} value={user.email} />
+      <br /><br /><br />
+
+      <input type="submit" value="제출"/>
+
+    </form>
+  );
 }
