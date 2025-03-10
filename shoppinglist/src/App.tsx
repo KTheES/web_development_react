@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ClickButton from './components/Button'
+import MyCard from './components/MyCard'
+import MyInput from './components/MyInput'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    
+      <ClickButton />
+      <br /><br />
+      <MyCard/>
+      <br /><br />
+      <MyInput />
     </>
   )
 }
+
+// App 내부에 ClickButton , MyCard가 있다. 트리 구조 참조하기.
+// 매번 props로 하는게 번거롭기 때문에 ContextAPI를 사용.  
 
 export default App
