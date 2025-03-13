@@ -3,19 +3,8 @@ import Header2 from "./components/Header/Header2";
 import CoreConcepts from "./components/CoreConcepts/CoreConcepts";
 import { CORE_CONCEPTS } from "./data";
 import TabButton from "./components/TabButton";
-import { useState } from "react";
 
 function App() {
-
-  // const [selectedTopic, setSelectedTopic] = useState('');
-  // 특정 상태를 업데이트해서 컴포넌트 렌더링을 일으키는 useState 단계로 넘어가고 있다.
-
-  function handleSelect(selectedTopic) {
-    // selectedButton = 'components', 'jsx', 'props', 'state'
-    console.log(selectedTopic);
-  } 
-
-
   return (
     <div>
       <Header2 />
@@ -35,11 +24,14 @@ function App() {
         <section id="examples">
           <h2>예시들</h2>
           <menu>
-            <TabButton onSelect={handleSelect('행복하자')}>Components</TabButton>
+            {/* <TabButton>Components</TabButton>
             <TabButton>JSX</TabButton>
             <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
-            {/* ↑children */}
+            <TabButton>State</TabButton> */}
+            <TabButton label='components'/>
+            <TabButton label='JSX'/>
+            <TabButton label='Props'/>
+            <TabButton label='State'/>
           </menu>
           동적인 버튼 클릭의 결과물
         </section>
