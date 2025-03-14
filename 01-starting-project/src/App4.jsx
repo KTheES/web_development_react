@@ -8,7 +8,7 @@ import { EXAMPLES } from "./data_updated";
 
 function App() {
 
-  const [selectedTopic, setSelectedTopic] = useState('');
+  const [selectedTopic, setSelectedTopic] = useState();
   // 특정 상태를 업데이트해서 컴포넌트 렌더링을 일으키는 useState 단계로 넘어가고 있다.
   
   function handleSelect(selectedTopic) {
@@ -41,7 +41,7 @@ function App() {
             <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
             {/* ↑children */}
           </menu>
-          {selectedTopic === '' ? <h3>버튼을 클릭하세요</h3> :          
+          {selectedTopic === undefined ? <h3>버튼을 클릭하세요</h3> :          
           <div id="tab-content">
           <h3>{EXAMPLES[selectedTopic].title}</h3>
             <p>{EXAMPLES[selectedTopic].description}</p>
@@ -52,8 +52,6 @@ function App() {
             </pre>
           </div>
           }        
-
-
 
         </section>
       </main>
