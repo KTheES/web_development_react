@@ -15,7 +15,7 @@ li {
 }
 
 li + li {
-  border-top: 1px solid #bdbdbd;
+  border-top: 1px soild #bdbdbd;
 }
 
 h3 {
@@ -36,6 +36,6 @@ button {
   margin: 3px;
 }
 
-strong { 
+strong {
   font-weight: 500;
 }
