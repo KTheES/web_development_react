@@ -1,5 +1,4 @@
 // Context API 이용하기 위한 import
-import { Children } from "react";
 import { createContext, useState } from "react";
 
 const data = [
@@ -43,9 +42,9 @@ const KPopContextProvider = ({children}) => {
   const [playList, setPlayList] = useState(data);
 
   return(
-    <KPopContextProvider value={{data, playList, setPlayList}}>
-      {/* {children} */}
-    </KPopContextProvider>
+    <KPopContext.Provider value={{data, playList, setPlayList}}>
+      {children}
+    </KPopContext.Provider>
   );
 }
 
