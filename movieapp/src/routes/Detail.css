@@ -1,8 +1,14 @@
+/* 수정본 */
+
 .detail-container {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: white;
-  min-height: 100vh;
   background-color: #000;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .detail-backdrop {
@@ -10,17 +16,23 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+
+  width: 100%;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .detail-overlay {
-  background: linear-gradient(to right, rgba(0,0,0,0.85),
-  rgba(0,0,0,0,4));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4));
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
   padding: 60px 5%;
+  box-sizing: border-box;
 }
 
 .detail-content {
@@ -36,7 +48,7 @@
 .detail-poster {
   width: 300px;
   border-radius: 10px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
 .detail-info {
@@ -46,7 +58,7 @@
 .detail-title {
   font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom :10px;
+  margin-bottom: 10px;
 }
 
 .detail-meta {
@@ -80,5 +92,5 @@
   text-align: center;
   font-size: 1.5rem;
   color: white;
-  background-color: #000;
-} 
+  background: #000;
+}
